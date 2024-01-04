@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## ABOUT
 
-Things you may want to cover:
+このプロジェクトはボルテキャラクターが登場しているジャケットを網羅するデータベースサイトを作りたいという趣旨で作りました。
+現在予定している機能は以下です。
 
-* Ruby version
+* キャラクター個別ページで登場楽曲ジャケット（**名前のみ**）とその難易度を一覧できる。
+* Googleアカウントでサインインすることでキャラクターが登場する楽曲を編集することができる。
+* (努力目標)キャラクターの一覧ではファンが描いたキャラクターアイコンを表示できる。
+* (努力目標)ジャケット名をクリックするとGoogle画像検索ページに飛ぶ。
+* (努力目標)ジャケット名から逆引き検索ができる。
 
-* System dependencies
+なお、ジャケットの名前のみ、またキャラクターアイコンをファンアートに限定するのは、
+公式の画像を使用することでこのプロジェクトが公式のものと混同されることを避けるためです。
 
-* Configuration
+## Technical Information
 
-* Database creation
+### Ruby version
+3.2.2
 
-* Database initialization
+### Rails version
+7.1.2
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Database
+SQLite3
