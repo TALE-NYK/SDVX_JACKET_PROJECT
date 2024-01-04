@@ -1,0 +1,2 @@
+class CharacterTune < ApplicationRecord
+end

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @character_tune %>
+
+<div>
+  <%= link_to "Edit this character tune", edit_character_tune_path(@character_tune) %> |
+  <%= link_to "Back to character tunes", character_tunes_path %>
+
+  <%= button_to "Destroy this character tune", @character_tune, method: :delete %>
+</div>

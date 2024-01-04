@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @tune %>
+
+<div>
+  <%= link_to "Edit this tune", edit_tune_path(@tune) %> |
+  <%= link_to "Back to tunes", tunes_path %>
+
+  <%= button_to "Destroy this tune", @tune, method: :delete %>
+</div>

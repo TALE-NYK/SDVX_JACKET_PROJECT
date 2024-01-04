@@ -1,0 +1,32 @@
+<%= form_with(model: tune) do |form| %>
+  <% if tune.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(tune.errors.count, "error") %> prohibited this tune from being saved:</h2>
+
+      <ul>
+        <% tune.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_area :name %>
+  </div>
+
+  <div>
+    <%= form.label :difficulty, style: "display: block" %>
+    <%= form.number_field :difficulty %>
+  </div>
+
+  <div>
+    <%= form.label :memo, style: "display: block" %>
+    <%= form.text_area :memo %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

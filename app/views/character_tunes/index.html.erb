@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Character tunes</h1>
+
+<div id="character_tunes">
+  <% @character_tunes.each do |character_tune| %>
+    <%= render character_tune %>
+    <p>
+      <%= link_to "Show this character tune", character_tune %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New character tune", new_character_tune_path %>

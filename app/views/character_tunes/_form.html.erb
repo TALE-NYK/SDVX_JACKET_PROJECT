@@ -1,0 +1,27 @@
+<%= form_with(model: character_tune) do |form| %>
+  <% if character_tune.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(character_tune.errors.count, "error") %> prohibited this character_tune from being saved:</h2>
+
+      <ul>
+        <% character_tune.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :character_id, style: "display: block" %>
+    <%= form.number_field :character_id %>
+  </div>
+
+  <div>
+    <%= form.label :tune_id, style: "display: block" %>
+    <%= form.number_field :tune_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
