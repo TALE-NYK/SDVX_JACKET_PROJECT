@@ -1,10 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
+<%= # ここは大きくしたい %>
 <%= render @character %>
+<div>
+  <%= render @tune_list %>
+</div>
 
 <div>
-  <%= link_to "Edit this character", edit_character_path(@character) %> |
-  <%= link_to "Back to characters", characters_path %>
+  <%= begin %>
+    ここから編集はできないようにする
+    <%= link_to "Edit this character", edit_character_path(@character) %> |
+  <%= end %>
 
-  <%= button_to "Destroy this character", @character, method: :delete %>
+  <%= link_to "Back to Lists", characters_path %>
+
+  <%= begin %>
+    # 削除は基本的にできないようにする
+    # <%= button_to "Destroy this character", @character, method: :delete %>
+  <%= end %>
 </div>
