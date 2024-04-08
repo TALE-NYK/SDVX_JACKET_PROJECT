@@ -1,4 +1,4 @@
-# キャラクター一覧の表示
+<%# キャラクター一覧の表示 %>
 <p style="color: green"><%= notice %></p>
 
 <h1>Characters</h1>
@@ -12,4 +12,7 @@
   <% end %>
 </div>
 
-# <%= link_to "New character", new_character_path %>
+<% if false %>
+  # この画面からキャラクター新規登録できるとよくないし、必要がない
+  <%= link_to "New character", new_character_path %>
+<% end %>
