@@ -5,14 +5,17 @@
 
 <div id="characters">
   <% @characters.each do |character| %>
-    <%= render character %>
     <p>
-      <%= link_to "#{character}", character %>
+      <%= link_to "#{character.name}", character %>
     </p>
   <% end %>
 </div>
 
 <% if false %>
   # この画面からキャラクター新規登録できるとよくないし、必要がない
+  <br> # DB登録するときだけtrueにする
+  <br>
   <%= link_to "New character", new_character_path %>
+  # TODO キャラクター個別画面に新しい曲を追加するリンクを貼って、createメソッドにcharacter_tunesへの登録をする処理を書く
+  <%= link_to "New Tune", new_tune_path %>
 <% end %>

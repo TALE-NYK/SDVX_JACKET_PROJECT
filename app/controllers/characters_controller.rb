@@ -8,7 +8,7 @@ class CharactersController < ApplicationController
 
   # GET /characters/1 or /characters/1.json
   def show
-    @tune_list = character_tunes.where("character_id = #{character.id}")
+    @tune_list = CharacterTune.where("character_id = #{@character.id}")
   end
 
   # GET /characters/new
